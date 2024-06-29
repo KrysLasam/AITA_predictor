@@ -230,8 +230,11 @@ elif my_page == 'Check if You\'re the A**hole':
         st.subheader('Let\'s hear what our model has to say:')
         st.markdown(gpt_feedback)
         # prompt_passed 
-        st.subheader('You may also view to the related story which we think shares the same sentiment:')
+        st.subheader('You may also view the related story which we think shares the same sentiment:')
         st.markdown(f'<div style="color: black">{similar_submission}</div>', unsafe_allow_html=True)
-        # similar_submission_tag
+        if similar_submission_tag =='nta':
+            st.markdown('People also think that the person in this story is not an a\*\*hole.')
+        else:
+            st.markdown('People also think that the person in this story is an a\*\*hole.')
 
     # '''Last weekend, my friends invited me to a barbecue, and I offered to bring drinks. I spent a lot of time and money selecting a variety of beverages, including some expensive craft beers that I know the group enjoys. When I arrived, one of the friends, who I know doesn't usually contribute much, immediately started taking the craft beers and sharing them with everyone without acknowledging my effort. I got upset and told him he should have asked first and contributed something himself. The atmosphere got tense, and some friends later said I overreacted. AITAH for getting upset and calling him out?'''
